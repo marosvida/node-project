@@ -1,7 +1,8 @@
 export interface LearningFact {
     id: number;
     learningPackageId: number; // Foreign key to LearningPackage
-    name: string;
+    wordFrench: string;
+    wordEnglish: string;
     disabled: boolean;
 }
 

@@ -234,9 +234,9 @@ learningPackageRoutes.post('/package/:id/fact', (req, res) => {
     const newLearningFact = req.body as LearningFact;
 
     // Validate that mandatory fields are provided
-    if (!newLearningFact.name ) {
+    if (!newLearningFact.wordFrench || !newLearningFact.wordEnglish ) {
         // Respond with a "Bad Request" error if mandatory fields are missing
-        res.status(400).send('Learning Fact name is missing!');
+        res.status(400).send('French or English translation is missing!');
         return;
     }
 

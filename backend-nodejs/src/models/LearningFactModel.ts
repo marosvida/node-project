@@ -6,7 +6,11 @@ const LearningFactModel = {
       autoIncrement: true,
       primaryKey: true,
     },
-    name: {
+    wordFrench: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    wordEnglish: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -14,7 +18,7 @@ const LearningFactModel = {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    disabled: {
+    disabled: { // for soft delete
       type: DataTypes.BOOLEAN,
       allowNull: false,
       defaultValue: false,
