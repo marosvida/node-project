@@ -8,8 +8,6 @@ PASSWORD=
 ```
 Those fields are used in `sequelize.ts` to configure db connection 
 
-run script `insert_data.sql` to insert data 
-
 ## To RUN backend
 
 ```
@@ -17,3 +15,5 @@ cd backend-nodejs
 npm install
 ```
 Run `npm start`
+
+Now run script `insert_data.sql` to insert data
