@@ -1,5 +1,5 @@
 ## Setup database
-````
+```
 cd backend-nodejs
 ```
 
