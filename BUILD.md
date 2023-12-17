@@ -1,5 +1,9 @@
 ## Setup database
-Create .env file within root directory
+````
+cd backend-nodejs
+```
+
+Create .env file within this directory
 Inside it define dbname, user, and password for your postgresql database
 ```
 DB_NAME=
