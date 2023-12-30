@@ -1,1 +1,18 @@
-<p>flashcard works!</p>
+<!-- flashcard.component.html -->
+
+<div class="container-fluid mt-4">
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let flashcard of flashcards">
+      <div class="card">
+        <img [src]="flashcard.imageUrl" class="card-img-top" alt="Flashcard Image">
+        <div class="card-body">
+          <h5 class="card-title">{{ flashcard.name }}</h5>
+          <p class="card-text" *ngIf="flashcard.translationVisible">{{ flashcard.translation }}</p>
+          <button class="btn btn-primary" (click)="toggleTranslation(flashcard)">
+            Show Translation
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
