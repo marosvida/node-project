@@ -1,0 +1,12 @@
+<ul>
+    <li *ngFor="let category of categories">
+        <a [routerLink]="['/category', category.id]" class="category-button" [ngStyle]="{'background-color': category.color}">
+            {{ category.title }}</a>
+    </li>
+</ul>
+
+<button (click)="toggleAddCategory()">Add category</button>
+
+<div *ngIf="showForm">
+    <app-add-category (closeModal)="toggleAddCategory()" (newCategory)="onNewCategory($event)"></app-add-category>
+</div>

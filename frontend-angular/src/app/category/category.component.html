@@ -1,0 +1,10 @@
+<div *ngIf="category; else noCat">
+    <div *ngFor="let word of category.LearningFacts">
+        {{word.wordFrench}}
+        {{word.wordEnglish}}
+    </div>
+</div>
+
+<ng-template #noCat>
+    No category
+</ng-template>
