@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { WordsService } from '../words.service';
 import { Subscription } from 'rxjs';
+import { Category } from '../interfaces/category';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +10,7 @@ import { Subscription } from 'rxjs';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   categories: any[] = [];
+  showForm: boolean = false;
 
   private categoriesSubscription: Subscription | undefined;
 
@@ -29,6 +31,14 @@ export class HomeComponent implements OnInit, OnDestroy {
         console.error(error);
       }
     );
+  }
+
+  toggleAddCategory() {
+    this.showForm = !this.showForm;
+  }
+
+  onNewCategory(category: Category) {
+    this.categories.push(category);
   }
 
   ngOnDestroy() {

@@ -8,6 +8,9 @@ import { HomeComponent } from './home/home.component';
 import { FlashcardComponent } from './flashcard/flashcard.component';
 import { UserAccountComponent } from './user-account/user-account.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { CategoryComponent } from './category/category.component';
+import { AddCategoryComponent } from './home/add-category/add-category.component';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,12 +18,15 @@ import { NavbarComponent } from './navbar/navbar.component';
     HomeComponent,
     FlashcardComponent,
     UserAccountComponent,
-    NavbarComponent
+    NavbarComponent,
+    CategoryComponent,
+    AddCategoryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

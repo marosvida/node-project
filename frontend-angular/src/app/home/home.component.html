@@ -4,3 +4,9 @@
             {{ category.title }}</a>
     </li>
 </ul>
+
+<button (click)="toggleAddCategory()">Add category</button>
+
+<div *ngIf="showForm">
+    <app-add-category (closeModal)="toggleAddCategory()" (newCategory)="onNewCategory($event)"></app-add-category>
+</div>
