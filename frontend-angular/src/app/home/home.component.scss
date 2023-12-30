@@ -1,0 +1,18 @@
+.category-button {
+    display: block;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid #000; /* You can adjust the border color */
+    border-radius: 10px; /* Adjust the border-radius for rounded corners */
+    text-align: center;
+    text-decoration: none;
+    color: #fff; /* You can adjust the text color */
+    background-color: #007bff; /* You can adjust the background color */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.category-button:hover {
+    background-color: #0056b3; /* Adjust the background color on hover */
+}
+  

@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let category of categories">
+        <a [routerLink]="['/category', category.id]" class="category-button" [ngStyle]="{'background-color': category.color}">
+            {{ category.title }}</a>
+    </li>
+</ul>
