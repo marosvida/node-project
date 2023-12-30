@@ -3,6 +3,7 @@ export interface LearningFact {
     learningPackageId: number; // Foreign key to LearningPackage
     wordFrench: string;
     wordEnglish: string;
+    imageUrl?: string;
     disabled: boolean;
 }
 
