@@ -4,6 +4,7 @@ export interface Word {
     wordEnglish: string,
     learningPackageId: number,
     disabled: boolean,
+    imageUrl?: string,
     createdAt: Date | string,
     updatedAt: Date | string,
 }

@@ -18,6 +18,6 @@ Those fields are used in `sequelize.ts` to configure db connection
 cd backend-nodejs
 npm install
 ```
-Run `npm start`
+Run `npm start` - this will also crete DB connection and create tables
 
 Now run script `insert_data.sql` to insert data
