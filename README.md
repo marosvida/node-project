@@ -21,4 +21,5 @@ You can add a new word for a category
 New word is successfully added and showed without reloading
 ![Alt text](screenshots/new_word_added.png)
 
+
 Happy learning!
