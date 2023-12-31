@@ -15,6 +15,12 @@
     </div>
   </div>
 
+<button (click)="toggleAddWord()">Add word</button>
+
+<div *ngIf="showForm">
+    <app-add-word (closeModal)="toggleAddWord()" (newWord)="onNewWord($event)"></app-add-word>
+</div>
+
 <ng-template #noCat>
     No category
 </ng-template>

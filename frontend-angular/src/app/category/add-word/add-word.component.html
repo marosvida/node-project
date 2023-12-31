@@ -1,0 +1,25 @@
+<div class="overlay">
+    <form [formGroup]="wordForm" (ngSubmit)="onCreateWord()">
+            <div>
+                <label for="wordFrench">French word</label>
+                <input type="text" class="form-control" id="categoryName" placeholder="Enter French word" formControlName="wordFrench">
+            </div>
+
+            <div>
+                <label for="wordEnglish">English word</label>
+                <input type="text" class="form-control" id="categoryName" placeholder="Enter English word" formControlName="wordEnglish">
+            </div>
+
+            <div>
+                <label for="imageUrl">Image Url</label>
+                <input type="text" class="form-control" id="categoryName" placeholder="Enter image url" formControlName="imageUrl">
+            </div>
+
+            <div>
+                <button type="button" (click)="onCloseModal()">Close</button>
+                <button type="submit">Submit</button>
+            </div>
+
+            <span *ngIf="wordForm.invalid && wordForm.touched">All fields are required!</span>
+    </form>
+</div>

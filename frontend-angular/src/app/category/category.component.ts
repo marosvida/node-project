@@ -12,6 +12,7 @@ import { Word } from '../interfaces/words';
 })
 export class CategoryComponent implements OnInit, OnDestroy{
   category: Category | undefined;
+  showForm: boolean = false;
 
   private categorySubscription: Subscription | undefined;
 
@@ -41,6 +42,19 @@ export class CategoryComponent implements OnInit, OnDestroy{
 
   toggleTranslation(flashcard: Word): void {
     flashcard.translationVisible = !flashcard.translationVisible;
+  }
+
+  toggleAddWord() {
+    this.showForm = !this.showForm;
+  }
+
+  onNewWord(word: Word) {
+    if (this.category) {
+      if (!this.category.LearningFacts) {
+        this.category.LearningFacts = [];
+      }
+      this.category.LearningFacts.push(word);
+    }
   }
 
   ngOnDestroy() {
