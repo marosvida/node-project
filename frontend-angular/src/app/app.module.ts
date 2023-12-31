@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CategoryComponent } from './category/category.component';
 import { AddCategoryComponent } from './home/add-category/add-category.component';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { AddWordComponent } from './category/add-word/add-word.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
     UserAccountComponent,
     NavbarComponent,
     CategoryComponent,
-    AddCategoryComponent
+    AddCategoryComponent,
+    AddWordComponent
   ],
   imports: [
     BrowserModule,

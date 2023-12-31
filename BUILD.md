@@ -21,3 +21,12 @@ npm install
 Run `npm start` - this will also crete DB connection and create tables
 
 Now run script `insert_data.sql` to insert data
+
+## To RUN frontend
+
+```
+cd frontend-angular
+npm install
+ng serve
+```
+The website is now available locally on `http://localhost:4200/`

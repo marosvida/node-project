@@ -23,4 +23,8 @@ export class WordsService {
   createCategory(category: CategoryCreate): Observable<Category> {
     return this.http.post<Category>('/api/package', category);
   }
+
+  createWord(word: Word, id: string): Observable<Word> {
+    return this.http.post<Word>(`/api/package/${id}/fact`, word);
+  }
 }
