@@ -7,4 +7,5 @@ export interface Word {
     imageUrl?: string,
     createdAt: Date | string,
     updatedAt: Date | string,
+    translationVisible?: boolean;
 }

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { CategoryCreate } from './interfaces/category-create';
 import { Observable } from 'rxjs';
 import { Category } from './interfaces/category';
+import { Word } from './interfaces/words';
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +16,8 @@ export class WordsService {
     return this.http.get('/api/package-summaries');
   }
 
-  getCategory(id: string) {
-    return this.http.get(`/api/package/${id}`);
+  getCategory(id: string): Observable<Category> {
+    return this.http.get<Category>(`/api/package/${id}`);
   }
 
   createCategory(category: CategoryCreate): Observable<Category> {

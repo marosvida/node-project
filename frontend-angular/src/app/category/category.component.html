@@ -1,9 +1,19 @@
 <div *ngIf="category; else noCat">
-    <div *ngFor="let word of category.LearningFacts">
-        {{word.wordFrench}}
-        {{word.wordEnglish}}
+    <div class="col">
+      <!-- <div class="row"> -->
+          <div class="card row" *ngFor="let word of category.LearningFacts">
+            <img [src]="word.imageUrl" alt="Image">
+            <div class="card-body">
+              <h5 class="card-title">{{ word.wordEnglish }}</h5>
+              <p *ngIf="word.translationVisible">{{ word.wordFrench }}</p>
+              <button class="btn btn-primary" (click)="toggleTranslation(word)">
+                Show Translation
+              </button>
+            </div>
+          </div>
+      <!-- </div> -->
     </div>
-</div>
+  </div>
 
 <ng-template #noCat>
     No category

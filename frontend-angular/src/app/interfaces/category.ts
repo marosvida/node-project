@@ -7,5 +7,5 @@ export interface Category {
     category: string;
     targetAudience: string;
     difficultyLevel: number | string;
-    words?: Word[];
+    LearningFacts?: Word[];
 }
